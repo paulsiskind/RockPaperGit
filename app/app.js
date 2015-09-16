@@ -1,13 +1,22 @@
 $('#player').on('change', function() {
   rockPaper();
 });
+$('.rock').on('click', function(){
+  rockPaper('rock');
+});
+$('.scissors').on('click', function(){
+  rockPaper('scissors');
+})
+$('.paper').on('click', function(){
+  rockPaper('paper');
+})
 
 
 
- function rockPaper(){
+ function rockPaper(player){
   var computerScore = 0;
   var playerScore = 0;
-  var player = $("#player").val();
+  // var player = $("#player").val();
   
 
    var result = ['rock','paper','scissors'];
