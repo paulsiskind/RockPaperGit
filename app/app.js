@@ -14,48 +14,48 @@ $('.paper').on('click', function(){
 
 
  function rockPaper(player){
-  var computerScore = 0;
-  var playerScore = 0;
   // var player = $("#player").val();
   
-
-   var result = ['rock','paper','scissors'];
-   var computer = result[Math.floor(Math.random()*3)];
+  var computerScore = 0;
+  var playerScore = 0;
+ for(var i=0; i<=5;i++){
+  var result = ['rock','paper','scissors'];
+  var computer = result[Math.floor(Math.random()*3)];
     console.log(computer);
-
+  
     var final = function(player, computer){
     if(player == 'rock'){
         if(computer == "scissors"){   
             playerScore++    
-            return("player wins")
+            return("Player Wins!")
         }if(computer == "rock"){
             return("Draw");
         }if(computer=='paper'){ 
             computerScore++        
-            return("computer wins");
+            return("Computer Wins!");
         }    
     }if(player == 'scissors'){
         if(computer=='scissors'){
             return("Draw")
         }if(computer=="rock"){   
             computerScore++     
-            return('computer wins')
+            return('Computer Wins!')
         }if(computer=='paper'){  
              playerScore++ 
-            return('Player wins')
+            return('Player Wins!')
         }
     }if(player=='paper'){
         if(computer=='paper'){
             return("Draw")
         }if(computer=='scissors'){
             computerScore++
-            return("computer wins!") 
+            return("Computer Wins!") 
         }if(computer=="rock"){ 
             playerScore++       
             return('Player Wins!')
         }
     }
-    
+      
   }
   //   console.log(final(player, computer))
 
@@ -66,4 +66,4 @@ $('.paper').on('click', function(){
   $('.computerScore').text('Computer '+ computerScore);
   $('.computerScore').css('display', 'block')
 }
- 
+}
